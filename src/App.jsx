@@ -1,5 +1,11 @@
+import AnimatedBG from "./components/AnimatedBG.jsx";
+
 const App = () => {
-	return <div></div>;
+	return (
+		<>
+			<AnimatedBG />
+		</>
+	);
 };
 
 export default App;

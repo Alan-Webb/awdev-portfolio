@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import {HERO_CONTENT} from "../constants";
-import jason from "../assets/alan-webb.jpg";
+import alan from "../assets/alan-webb.webp";
 
 const textVariants = {
 	hidden: {opacity: 0, y: 50},
@@ -66,11 +66,11 @@ const Hero = () => {
 					animate="visible"
 					variants={imageVariants}>
 					<img
-						src={jason}
-						alt="Jason Root"
-						width={650}
-						height={650}
-						className="rounded-3xl"
+						src={alan}
+						alt="Alan Webb"
+						width={500}
+						height={500}
+						className="rounded-4xl"
 					/>
 				</motion.div>
 			</div>

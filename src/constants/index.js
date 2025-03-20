@@ -83,11 +83,7 @@ export const TESTIMONIALS = [
 	},
 ];
 
-export const CONTACT_CONTENT = {
-	headline: "LET'S WORK ON SOMETHING GREAT",
-	description:
-		"I'm excited to collaborate on projects that push boundaries and create meaningful impact. Let's build something innovative and exceptional together.",
-	email: "webbalan91939@gmail.com",
+export const FOOTER_CONTENT = {
 	socialLinks: [
 		{
 			platform: "GitHub",

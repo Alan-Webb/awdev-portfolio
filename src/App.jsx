@@ -4,6 +4,7 @@ import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import Projects from "./components/Projects.jsx";
+import Marquee from "./components/Marquee.jsx";
 
 const App = () => {
 	return (
@@ -11,6 +12,7 @@ const App = () => {
 			<AnimatedBG />
 			<Navbar />
 			<Hero />
+			<Marquee />
 			<About />
 			<Projects />
 			<Testimonials />

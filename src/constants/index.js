@@ -15,14 +15,17 @@ export const LINKS = [
 ];
 
 export const HERO_CONTENT = {
-	greeting: "Hello World! 🖐️",
+	greeting: "Hello World!",
 	introduction:
-		"I’m Alan Webb, a creative frontend developer, crafting immersive and intuitive web experiences.",
+		"I'm Alan Webb, a creative frontend developer, crafting immersive and intuitive web experiences.",
 	description:
-		"I’m currently helping businesses bring their visions to life through interactive digital solutions.",
+		"I’m currently helping small businesses bring their visions to life through interactive digital solutions.",
 	resumeLinkText: "Download Resume",
 	resumeLink: "/resume.pdf",
 };
+
+export const MARQUEE_TEXT =
+	" React, Next.js, Node, MongoDb, Tailwind, MySql, Javascript, Redis,";
 
 export const PROJECTS = [
 	{

@@ -53,7 +53,7 @@ const Projects = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 									className="bg-white text-stone-900 rounded-full py-2 px-2 w-32 text-sm hover:bg-gray-100 text-center mx-auto">
-									View on GitHub
+									View Project
 								</a>
 							</div>
 						</div>

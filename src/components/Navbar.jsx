@@ -1,62 +1,95 @@
 import {useState} from "react";
-import logo from "../assets/awdev.png";
 import {LINKS} from "../constants";
-import {RiCloseFill} from "react-icons/ri";
-import {HiBars3} from "react-icons/hi2";
+import {FaTimes} from "react-icons/fa";
+import {FaBars} from "react-icons/fa6";
 
 const Navbar = () => {
-	const [menuOpen, setMenuOpen] = useState(false);
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-	const handleLinkClick = () => {
-		setMenuOpen(false);
+	const toggleMobileMenu = () => {
+		setIsMobileMenuOpen(!isMobileMenuOpen);
+	};
+
+	const handleLinkClick = (e, href) => {
+		e.preventDefault();
+		const targetElement = document.querySelector(href);
+		if (targetElement) {
+			const offset = -85;
+			const elementPosition = targetElement.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + scrollY + offset;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: "smooth",
+			});
+		}
+		setIsMobileMenuOpen(false);
 	};
 
 	return (
-		<nav className="fixed top-0 left-0 w-full z-50">
-			<div className="flex justify-between items-center max-w-6xl mx-auto md:my-2 bg-stone-950/30 p-4 md:rounded-xl backdrop-blur-lg">
-				<div className="text-white font-semibold text-lg uppercase">
-					<img src={logo} width={50} height={25} alt="logo" />
-					<p className="block">AWDev</p>
+		<div>
+			<nav className="fixed left-0 right-0 top-4 z-50">
+				{/* Desktop Menu */}
+				<div className="mx-auto hidden max-w-2xl items-center justify-center rounded-lg border border-stone-50/30 bg-black/20 py-3 backdrop-blur-lg lg:flex">
+					<div className="flex items-center justify-between gap-6">
+						<div>
+							<a href="#">
+								<p className="uppercase pe-48">Alan Webb</p>
+							</a>
+						</div>
+						<div>
+							<ul className="flex items-center gap-4">
+								{LINKS.map((item, index) => (
+									<li key={index}>
+										<a
+											href={item.href}
+											onClick={(e) => handleLinkClick(e, item.href)}
+											className="text-sm hover:text-yellow-400">
+											{item.label}
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					</div>
 				</div>
-
-				<div className="hidden md:flex space-x-8">
-					{LINKS.map((link, index) => (
-						<a
-							href={link.href}
-							key={index}
-							className="text-white hover:text-stone-400 transition duration-300">
-							{link.label}
-						</a>
-					))}
+				{/* Mobile Menu */}
+				<div className="rounded-lg backdrop-blur-md lg:hidden">
+					<div className="flex items-center justify-center">
+						<div>
+							<a href="#">
+								<p className="uppercase pe-48">Alan Webb</p>
+							</a>
+						</div>
+						<div className="flex items-center">
+							<button
+								onClick={toggleMobileMenu}
+								className="focus:outline-none lg:hidden">
+								{isMobileMenuOpen ? (
+									<FaTimes className="m-2 h-6 w-5" />
+								) : (
+									<FaBars className="m-2 h-6 w-5" />
+								)}
+							</button>
+						</div>
+					</div>
+					{isMobileMenuOpen && (
+						<ul className="ml-4 mt-4 flex flex-col gap-4 backdrop-blur-md">
+							{LINKS.map((item, index) => (
+								<li key={index}>
+									<a
+										href={item.href}
+										className="block w-full text-lg"
+										onClick={(e) => handleLinkClick(e, item.href)}>
+										{item.label}
+									</a>
+								</li>
+							))}
+						</ul>
+					)}
 				</div>
-
-				<div className="md:hidden">
-					<button
-						onClick={() => setMenuOpen(!menuOpen)}
-						className="text-white focus:outline-none"
-						aria-label={menuOpen ? "Close Menu" : "Open Menu"}>
-						{menuOpen ? (
-							<RiCloseFill className="w-6 h-6" />
-						) : (
-							<HiBars3 className="w-6 h-6" />
-						)}
-					</button>
-				</div>
-			</div>
-			{menuOpen && (
-				<div className="md:hidden p-2 bg-stone-950/30 backdrop-blur-lg rounded-xl flex flex-col space-x-4 max-w-6xl mx-auto">
-					{LINKS.map((link, index) => (
-						<a
-							href={link.href}
-							key={index}
-							className="text-white hover:text-stone-400 transition duration-300"
-							onClick={handleLinkClick}>
-							{link.label}
-						</a>
-					))}
-				</div>
-			)}
-		</nav>
+			</nav>
+		</div>
 	);
 };
 

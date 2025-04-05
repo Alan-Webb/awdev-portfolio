@@ -15,9 +15,10 @@ export const LINKS = [
 ];
 
 export const HERO_CONTENT = {
-	greeting: "Hello World!",
+	name: "Alan Webb",
+	title: "Frontend Developer",
 	introduction:
-		"I'm Alan Webb, a creative frontend developer, crafting immersive and intuitive web experiences.",
+		"I'm a creative frontend developer, crafting immersive and intuitive web experiences.",
 	description:
 		"I’m currently helping small businesses bring their visions to life through interactive digital solutions.",
 	resumeLinkText: "Download Resume",
@@ -25,7 +26,7 @@ export const HERO_CONTENT = {
 };
 
 export const MARQUEE_TEXT =
-	" React, Next.js, Node, MongoDb, Tailwind, MySql, Javascript, Redis,";
+	"| HTML5 || CSS3 || JavaScript || Bootstrap5 || Sass || TailwindCSS || React |";
 
 export const PROJECTS = [
 	{

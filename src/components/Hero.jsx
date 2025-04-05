@@ -28,17 +28,22 @@ const imageVariants = {
 const Hero = () => {
 	return (
 		<section>
-			<div className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white">
+			<div className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white mb-[-10rem]">
 				<motion.div
 					className="w-full md:w-1/2 p-8"
 					initial="hidden"
 					animate="visible"
 					variants={containerVariants}>
 					<motion.h1
-						className="text-2xl md:text-3xl lg:text-5xl my-14"
+						className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent mb-3"
 						variants={textVariants}>
-						{HERO_CONTENT.greeting}
+						{HERO_CONTENT.name}
 					</motion.h1>
+					<motion.h2
+						className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent mb-3"
+						variants={textVariants}>
+						{HERO_CONTENT.title}
+					</motion.h2>
 					<motion.p
 						className="text-xl md:text-2xl lg:text-4xl mb-4"
 						variants={textVariants}>
@@ -61,7 +66,7 @@ const Hero = () => {
 				</motion.div>
 
 				<motion.div
-					className="w-full md:w-1/2 p-8"
+					className="w-full md:w-1/2 px-8"
 					initial="hidden"
 					animate="visible"
 					variants={imageVariants}>

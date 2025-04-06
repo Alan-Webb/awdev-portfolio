@@ -28,7 +28,7 @@ const imageVariants = {
 const Hero = () => {
 	return (
 		<section>
-			<div className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white mb-[-10rem]">
+			<div className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white sm:mb-[-10rem]">
 				<motion.div
 					className="w-full md:w-1/2 p-8"
 					initial="hidden"

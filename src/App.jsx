@@ -5,6 +5,7 @@ import About from "./components/About.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import Projects from "./components/Projects.jsx";
 import Marquee from "./components/Marquee.jsx";
+import Contact from "./components/Contact.jsx";
 
 const App = () => {
 	return (
@@ -16,6 +17,7 @@ const App = () => {
 			<About />
 			<Projects />
 			<Testimonials />
+			<Contact />
 		</>
 	);
 };

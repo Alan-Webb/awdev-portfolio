@@ -50,13 +50,11 @@ const Contact = () => {
 					formData,
 					"6q1bs_-46t8jkufU1"
 				)
-				.then((Response) => {
-					// console.log("SUCCESS!", Response.status, Response.text);
+				.then(() => {
 					toast.success("Message sent successfully!");
 					setFormData({name: "", email: "", message: ""});
 				})
-				.catch((error) => {
-					// console.log("FAILED!", error);
+				.catch(() => {
 					toast.error("Failed to send message. Please try again");
 				})
 				.finally(() => {
@@ -141,7 +139,7 @@ const Contact = () => {
 				</div>
 				<button
 					type="submit"
-					className={`mb-8 w-full rounded bg-yellow-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-yellow-500 ${
+					className={`mb-8 w-full rounded bg-pink-600 px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-500 ${
 						isSending ? "cursor-not-allowed opacity-50" : ""
 					}`}
 					disabled={isSending}>

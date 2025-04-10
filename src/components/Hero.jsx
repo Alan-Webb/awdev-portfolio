@@ -28,19 +28,19 @@ const imageVariants = {
 const Hero = () => {
 	return (
 		<section>
-			<div className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white sm:mb-[-10rem]">
+			<div className="z-10 min-h-screen flex flex-col md:flex-row items-center text-white">
 				<motion.div
 					className="w-full md:w-1/2 p-8"
 					initial="hidden"
 					animate="visible"
 					variants={containerVariants}>
 					<motion.h1
-						className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent mb-3"
+						className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent mb-4"
 						variants={textVariants}>
 						{HERO_CONTENT.name}
 					</motion.h1>
 					<motion.h2
-						className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent mb-3"
+						className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent mb-4"
 						variants={textVariants}>
 						{HERO_CONTENT.title}
 					</motion.h2>
@@ -55,7 +55,7 @@ const Hero = () => {
 						{HERO_CONTENT.description}
 					</motion.p>
 					<motion.a
-						className="bg-stone-50 text-stone-900 p-3 lg:p-4 mt-8 inline-block rounded-2xl"
+						className="bg-pink-600 text-white p-3 lg:p-4 mt-8 inline-block rounded-2xl"
 						href={HERO_CONTENT.resumeLink}
 						download
 						rel="noopener noreferrer"

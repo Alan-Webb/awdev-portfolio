@@ -4,7 +4,6 @@ import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import Projects from "./components/Projects.jsx";
-import Marquee from "./components/Marquee.jsx";
 import Contact from "./components/Contact.jsx";
 
 const App = () => {
@@ -13,7 +12,6 @@ const App = () => {
 			<AnimatedBG />
 			<Navbar />
 			<Hero />
-			<Marquee />
 			<About />
 			<Projects />
 			<Testimonials />

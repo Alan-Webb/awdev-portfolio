@@ -44,7 +44,7 @@ const Navbar = () => {
 										<a
 											href={item.href}
 											onClick={(e) => handleLinkClick(e, item.href)}
-											className="text-sm hover:text-yellow-400">
+											className="text-sm hover:text-pink-400">
 											{item.label}
 										</a>
 									</li>
@@ -79,7 +79,7 @@ const Navbar = () => {
 								<li key={index}>
 									<a
 										href={item.href}
-										className="block w-full text-lg"
+										className="block w-full text-lg hover:text-pink-400"
 										onClick={(e) => handleLinkClick(e, item.href)}>
 										{item.label}
 									</a>

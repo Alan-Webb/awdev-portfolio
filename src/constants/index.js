@@ -1,11 +1,11 @@
-import projects1 from "../assets/matilda-hex.jpg";
-import projects2 from "../assets/paragon-studios.jpg";
-import projects3 from "../assets/coming-soon.jpg";
+import projects1 from "../assets/matilda-hex.webp";
+import projects2 from "../assets/paragon-studios.webp";
+import projects3 from "../assets/coming-soon.webp";
 
-import person1 from "../assets/test-user-1.jpg";
-import person2 from "../assets/test-user-2.jpg";
-import person3 from "../assets/test-user-3.jpg";
-import person4 from "../assets/test-user-4.jpg";
+import person1 from "../assets/test-user-1.webp";
+import person2 from "../assets/test-user-2.webp";
+import person3 from "../assets/test-user-3.webp";
+import person4 from "../assets/test-user-4.webp";
 
 export const LINKS = [
 	{href: "#about", label: "About"},
@@ -30,8 +30,8 @@ export const MARQUEE_TEXT =
 
 export const ABOUT_CONTENT = {
 	paragraphs: [
-		"I am a dedicated frontend developer with a passion for building modern web applications that are both functional and aesthetically pleasing. Over the years, I have worked on numerous projects ranging from single-page applications to complex multi-tiered systems, always ensuring high performance and seamless user experiences.",
-		"I specialize in using technologies like React, and Tailwind CSS to create responsive and scalable interfaces. My focus is on writing clean, maintainable code while aiming to deliver projects that meet both business goals and user needs. I thrive in environments that challenge me to continuously learn and grow.",
+		"I am a dedicated frontend developer with a passion for building modern web applications that are both functional and aesthetically pleasing. Over the years, I have worked on numerous projects, always ensuring high performance and seamless user experiences.",
+		"I specialize in using technologies like React, and Tailwind CSS to create responsive and scalable interfaces. My focus is on writing clean, maintainable code while aiming to deliver projects that meet both business goals and user needs.",
 	],
 };
 
